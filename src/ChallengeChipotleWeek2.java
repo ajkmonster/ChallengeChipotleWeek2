@@ -72,7 +72,7 @@ private static String RandVeggies;
             System.out.print(salsa.get(index));
         }
     }
-    // used to randomly get an index from veggies arraylist and print that or
+    // used to randomly get an index from veggies array list and print that or
     // if all then all the veggies, else no veggies
     private static void randomGeneratorVeggies (ArrayList<String> input){
         Random random = new Random();
