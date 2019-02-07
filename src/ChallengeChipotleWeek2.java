@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Random;
 
 public class ChallengeChipotleWeek2 {
@@ -31,7 +30,7 @@ private static String RandVeggies;
             System.out.println("\n");
         }
     }
-    public static void randomGeneratorRice(){
+    private static void randomGeneratorRice(){
         Random random = new Random();
         int index = random.nextInt(rice.size());
         RandRice =rice.get(index);
@@ -41,7 +40,7 @@ private static String RandVeggies;
             System.out.print(rice.get(index));
         }
     }
-    public static void randomGeneratorBeans(ArrayList<String> input){
+    private static void randomGeneratorBeans(ArrayList<String> input){
         Random random = new Random();
         int index = random.nextInt(input.size());
         RandBeans =beans.get(index);
@@ -51,13 +50,12 @@ private static String RandVeggies;
             System.out.print(input.get(index));
         }
     }
-    public static void randomGeneratorMeat(){
+    private static void randomGeneratorMeat(){
         Random random = new Random();
         int index = random.nextInt(rice.size());
-        meat.get(index);
         System.out.print(meat.get(index));
     }
-    public static void randomGeneratorSalsa(){
+    private static void randomGeneratorSalsa(){
         Random random = new Random();
         int index = random.nextInt(salsa.size());
         RandSalsa = salsa.get(index);
@@ -69,7 +67,7 @@ private static String RandVeggies;
             System.out.print(salsa.get(index));
         }
     }
-    public static void randomGeneratorVeggies (ArrayList<String> input){
+    private static void randomGeneratorVeggies (ArrayList<String> input){
         Random random = new Random();
         int index = random.nextInt(input.size());
         RandVeggies=veggies.get(index);
@@ -81,8 +79,8 @@ private static String RandVeggies;
             System.out.print(input.get(index));
         }
     }
-    public static void prices(){
-        Double price=5.50;
+    private static void prices(){
+        double price=5.50;
 
         if (RandRice.equalsIgnoreCase("none")) {
             price -= 0.5;
@@ -105,7 +103,7 @@ private static String RandVeggies;
         System.out.print(" Price is $"+price);
     }
 
-    public static void InitializeArrays(){
+    private static void InitializeArrays(){
         Collections.addAll(rice, "white","brown","none");
         Collections.addAll(meat,"chicken","steak","carnitas","chorizo","sofritas","veggies");
         Collections.addAll(beans, "pinto","black","none");
