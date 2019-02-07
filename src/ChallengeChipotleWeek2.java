@@ -30,6 +30,7 @@ private static String RandVeggies;
             System.out.println("\n");
         }
     }
+    //used to get random index for rice
     private static void randomGeneratorRice(){
         Random random = new Random();
         int index = random.nextInt(rice.size());
@@ -40,6 +41,7 @@ private static String RandVeggies;
             System.out.print(rice.get(index));
         }
     }
+    //used to get random index for beans if none then print no beans
     private static void randomGeneratorBeans(ArrayList<String> input){
         Random random = new Random();
         int index = random.nextInt(input.size());
@@ -50,11 +52,14 @@ private static String RandVeggies;
             System.out.print(input.get(index));
         }
     }
+    //used to get random index for meat
     private static void randomGeneratorMeat(){
         Random random = new Random();
         int index = random.nextInt(rice.size());
         System.out.print(meat.get(index));
     }
+    //used to get random salsa index
+    //output that index or if none print no salsa or if all then print all salsa types
     private static void randomGeneratorSalsa(){
         Random random = new Random();
         int index = random.nextInt(salsa.size());
@@ -67,6 +72,8 @@ private static String RandVeggies;
             System.out.print(salsa.get(index));
         }
     }
+    // used to randomly get an index from veggies arraylist and print that or
+    // if all then all the veggies, else no veggies
     private static void randomGeneratorVeggies (ArrayList<String> input){
         Random random = new Random();
         int index = random.nextInt(input.size());
@@ -79,6 +86,7 @@ private static String RandVeggies;
             System.out.print(input.get(index));
         }
     }
+    //method to calculate price based off if they had one of each category already
     private static void prices(){
         double price=5.50;
 
@@ -102,7 +110,7 @@ private static String RandVeggies;
         }
         System.out.print(" Price is $"+price);
     }
-
+// method to add items to each array list
     private static void InitializeArrays(){
         Collections.addAll(rice, "white","brown","none");
         Collections.addAll(meat,"chicken","steak","carnitas","chorizo","sofritas","veggies");
